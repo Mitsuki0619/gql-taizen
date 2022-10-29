@@ -13,10 +13,9 @@ export const PostForm: React.FC = () => {
     setContent(e.target.value);
   };
 
-  const handleClickAdd = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClickAdd = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log(title);
-    console.log(content);
+    // 投稿作成処理
   };
 
   return (

@@ -20,3 +20,94 @@
   background-color: white;
   border-radius: 15px;
 }
+.btn_area {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.edit_btn {
+  font-size: 16px;
+  border: none;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 7px 15px;
+  border-radius: 10px;
+}
+.edit_btn:hover {
+  opacity: 0.8;
+}
+.delete_btn {
+  font-size: 16px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 7px 15px;
+  border-radius: 10px;
+}
+.delete_btn:hover {
+  opacity: 0.8;
+}
+
+.label_text {
+  width: 100%;
+}
+
+dl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+dt {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+}
+dd {
+  width: 100%;
+  margin: 0;
+}
+
+.title_input {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.content_textarea {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.update_btn {
+  font-size: 16px;
+  border: none;
+  background-color: limegreen;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 7px 15px;
+  border-radius: 10px;
+}
+.edit_btn:hover {
+  opacity: 0.8;
+}
+.cancel_btn {
+  font-size: 16px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 7px 15px;
+  border-radius: 10px;
+}
+.delete_btn:hover {
+  opacity: 0.8;
+}

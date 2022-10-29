@@ -1,4 +1,3 @@
-import { SetStateAction, useState } from "react";
 import { PostForm } from "./components/PostForm/PostForm";
 import styles from "./App.module.css";
 import { PostList } from "./components/PostList/PostList";
