@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import styles from "./PostForm.module.css";
 
@@ -13,10 +14,17 @@ export const PostForm: React.FC = () => {
     setContent(e.target.value);
   };
 
-  const handleClickAdd = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClickAdd = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log(title);
-    console.log(content);
+    try {
+      await axios.post("http://localhost:3000/post", {
+        title,
+        content,
+        authorId: 1,
+      });
+    } catch (err) {
+      throw err;
+    }
   };
 
   return (
