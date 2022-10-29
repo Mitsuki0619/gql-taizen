@@ -1,0 +1,22 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+.title {
+  border-bottom: 2px solid gray;
+}
+.post_list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.post_item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+}

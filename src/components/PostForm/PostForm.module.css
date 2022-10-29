@@ -1,0 +1,60 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.label_text {
+  width: 100%;
+}
+
+dl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+dt {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+}
+dd {
+  width: 100%;
+  margin: 0;
+}
+
+.title_input {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+}
+.content_textarea {
+  width: 100%;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn_area {
+  width: 100%;
+  text-align: right;
+}
+.add_btn {
+  font-size: 24px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 7px 15px;
+  border-radius: 15px;
+  display: block;
+  margin-left: auto;
+}
+.add_btn:hover {
+  opacity: 0.8;
+}

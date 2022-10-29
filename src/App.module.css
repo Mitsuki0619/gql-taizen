@@ -1,0 +1,13 @@
+.app {
+  width: 100%;
+}
+
+.container {
+  width: 560px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
