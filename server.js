@@ -8,21 +8,25 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-app.get("/post", async (req, res) => {
+// 全投稿取得
+app.get("/posts", async (req, res) => {
   const posts = await prisma.post.findMany({
     where: { published: true },
+    orderBy: { createdAt: "desc" },
   });
   res.json(posts);
 });
 
-app.get("/post/:id", async (req, res) => {
-  const { id } = req.params.id;
+// id指定の投稿を取得
+app.get("/post:id", async (req, res) => {
+  const { id } = req.params;
   const post = await prisma.post.findOne({
-    where: { id },
+    where: { id: parseInt(id) },
   });
   res.json(post);
 });
 
+// 投稿追加
 app.post("/post", async (req, res) => {
   const { title, content, authorId } = req.body;
   const post = await prisma.post.create({
@@ -36,22 +40,24 @@ app.post("/post", async (req, res) => {
   res.json(post);
 });
 
-app.put("/post/:id", async (req, res) => {
-  const { id } = req.params.id;
+// 投稿更新
+app.put("/post:id", async (req, res) => {
+  const { id } = req.params;
   const { title, content } = req.body;
   const post = await prisma.post.update({
-    where: { id },
+    where: { id: parseInt(id) },
     data: { title, content },
   });
   res.json(post);
 });
 
+// 投稿削除
 app.delete("/post:id", async (req, res) => {
-  const { id } = req.params.id;
+  const { id } = req.params;
   const post = await prisma.post.delete({
-    where: { id },
+    where: { id: parseInt(id) },
   });
-  req.json(post);
+  res.json(post);
 });
 
 app.listen(PORT, () => {

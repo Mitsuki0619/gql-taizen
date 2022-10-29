@@ -2,7 +2,9 @@ import axios from "axios";
 import React, { useState } from "react";
 import styles from "./PostForm.module.css";
 
-export const PostForm: React.FC = () => {
+export const PostForm: React.FC<{ fetchPosts: () => Promise<void> }> = ({
+  fetchPosts,
+}) => {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
 
@@ -22,6 +24,9 @@ export const PostForm: React.FC = () => {
         content,
         authorId: 1,
       });
+      setTitle("");
+      setContent("");
+      fetchPosts();
     } catch (err) {
       throw err;
     }
